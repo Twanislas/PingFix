@@ -1,17 +1,13 @@
 @ECHO OFF
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::
-:: Script réalisé par Antoine Rahier
-:: v1.0 - 23 Juillet 2009
+:: Script rÃ©alisÃ© par Antoine Rahier
+:: v1.1 - 03 Juillet 2011
 ::
-:: Ce script utilise l'algorithme de Nagle afin d'optimiser
-:: vos connexions réseau.
-:: Plus d'info : http://fr.wikipedia.org/wiki/Algorithme_de_Nagle
-::
-:: Vous êtes libre de le distribuer à votre guise, veuillez
+:: Vous Ãªtes libre de le distribuer Ã  votre guise, veuillez
 :: simplement mentionner l'auteur original.
 ::
-:: Si vous utilisez ce script et qu'il vous plaît, faites
+:: Si vous utilisez ce script et qu'il vous plaÃ®t, faites
 :: le moi savoir en m'envoyant un mail : antoine.rahier@gmail.com
 ::
 :: Merci ! :)
@@ -36,7 +32,7 @@ REGEDIT /E %Temp%\tmp.reg "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\
 :: On vire ce dont on a pas besoin
 TYPE %Temp%\tmp.reg | FIND "{" > %Temp%\tmp2.reg
 
-:: On prépare add.reg
+:: On prÃ©pare add.reg
 >%Temp%\add.reg ECHO Windows Registry Editor Version 5.00
 >>%Temp%\add.reg ECHO.
 >>%Temp%\add.reg ECHO [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSMQ\Parameters]
@@ -63,7 +59,7 @@ ENDLOCAL
 GOTO:EOF
 
 :Parse
-:: On ajoute le TcpAckFrequecy a chaque sous clé
+:: On ajoute le TcpAckFrequecy a chaque sous clÃ©
 SET Key=%1
 >>%Temp%\add.reg ECHO %Key%
 >>%Temp%\add.reg ECHO "TcpAckFrequency"=dword:00000001
