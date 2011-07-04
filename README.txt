@@ -5,8 +5,9 @@ v1.1 - 03 July 2011
 
 1) What the heck is this !?
 
-PingFix is a small batch script for windows. It allows to  improve ping in
-applications with high reactivity needs, such as online video games.
+PingFix is a small batch script for windows. Its aim is to improve latency in
+applications with high reactivity needs, such as online video games. To do that,
+it disables the use of Nagle's algorithm by windows.
 
 For more information about Nagle's algorithm, see :
 http://en.wikipedia.org/wiki/Nagle's_algorithm
